@@ -1,0 +1,66 @@
+{
+  "name": "nodejs-mongodb",
+  "version": "1.0.0",
+  "description": "express + webpack + mongodb",
+  "main": "app.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=develop webpack-dev-server --config webpack.dev.config.js",
+    "build": "rimraf build & rimraf stats.json & rimraf server/logs & webpack --hide-modules --config webpack.pro.config.js",
+    "server": "rimraf server/logs & cross-env NODE_ENV=server & nodemon server.js",
+    "pro": "npm run build & node app.js",
+    "app": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuxingsheng/express-mongodb.git"
+  },
+  "author": "tuxingsheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tuxingsheng/express-mongodb/issues"
+  },
+  "homepage": "https://github.com/tuxingsheng/express-mongodb#readme",
+  "dependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-runtime": "^6.9.2",
+    "browser-sync": "^2.13.0",
+    "consolidate": "^0.14.1",
+    "cross-env": "^1.0.8",
+    "css-loader": "^0.23.1",
+    "extract-loader": "0.0.2",
+    "file-loader": "^0.9.0",
+    "glob": "^7.0.5",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.21.0",
+    "image-webpack-loader": "^1.8.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "mongoose": "^4.5.1",
+    "rimraf": "^2.5.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.10.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.4.2",
+    "eventproxy": "^0.3.4",
+    "express": "^4.14.0",
+    "express-session": "^1.13.0",
+    "express-validator": "^2.20.8",
+    "lodash": "^4.13.1",
+    "log4js": "^0.6.37",
+    "nodemailer": "^2.4.2",
+    "nodemailer-wellknown": "^0.1.10",
+    "superagent": "^2.0.0",
+    "utility": "^1.8.0"
+  }
+}

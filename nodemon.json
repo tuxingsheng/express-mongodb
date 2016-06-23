@@ -1,0 +1,28 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    "node_modules/**/node_modules",
+	"server/logs/**/*"
+  ],
+  "verbose": true,
+  "execMap": {
+    "": "node",
+    "js": "node --harmony"
+  },
+  "events": {
+    "start": "echo ----------app start----------",
+    "restart": "echo ----------app reload----------"
+  },
+  "watch": [
+    "server/**/*.js",
+    "server.js"
+  ],
+  "env": {
+    "NODE_ENV": "server",
+    "PORT": "9090"
+  },
+  "ext": "js",
+  "legacy-watch": false,
+  "runOnChangeOnly": false,
+  "colours": true
+}
